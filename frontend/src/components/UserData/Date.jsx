@@ -10,13 +10,14 @@ const Date = () => {
   const handleDateChange = (e) => {
     setBirthDate(e.target.value);
   };
-
+  
   const handleSubmit = () => {
     if (birthDate) {
-      // Navigate to the time page
+      sessionStorage.setItem("birthDate", birthDate); // Store date in sessionStorage
       navigate("/time");
     }
   };
+  
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col justify-center items-center px-6 py-24">

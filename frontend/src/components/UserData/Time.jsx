@@ -1,11 +1,21 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Time = () => {
-  const [time, setTime] = useState(""); // Store the selected time
+  const [time, setTime] = useState('');
+
+  // Load time from sessionStorage when the component mounts
+  useEffect(() => {
+    const savedTime = sessionStorage.getItem('timeOfBirth');
+    if (savedTime) {
+      setTime(savedTime);
+    }
+  }, []);
 
   const handleTimeChange = (e) => {
-    setTime(e.target.value); // Update the time when the input changes
+    const selectedTime = e.target.value;
+    setTime(selectedTime);
+    sessionStorage.setItem('timeOfBirth', selectedTime); // Save the time to session storage
   };
 
   return (
@@ -27,7 +37,6 @@ const Time = () => {
           onChange={handleTimeChange}
           className="text-xl py-3 px-6 rounded-lg bg-gray-900 text-white border-2 border-yellow-700 focus:ring-4 focus:ring-yellow-700 w-72 sm:w-96 transition-all duration-300 transform hover:scale-105"
         />
-        
       </div>
 
       {/* Submit Button */}

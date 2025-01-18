@@ -7,8 +7,10 @@ const Gender = () => {
 
   const handleGenderSelection = (gender) => {
     setSelectedGender(gender);
+    sessionStorage.setItem("gender", gender); // Store gender in sessionStorage
     navigate("/date");
   };
+  
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col justify-center items-center px-6 py-24">
