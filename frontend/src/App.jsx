@@ -13,6 +13,7 @@ import BirthChart from "./components/Birthchart";
 import Chart from "./components/Chart/Chart";
 import Dashboard from "./components/Dashboard/Dashboard";
 import ProxyRequest from "./components/Proxy";
+import Gems from "./Gems";
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
             <Route path="/chart" element={<Chart/>} />
             <Route path="/dashboard" element={<Dashboard/>} />
             <Route path="/proxy" element={<ProxyRequest/>} />
+            <Route path="/gems" element={<Gems/>} />
+
 
 
 

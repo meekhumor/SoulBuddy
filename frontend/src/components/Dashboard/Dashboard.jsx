@@ -57,7 +57,7 @@ const Dashboard = () => {
                 className={`flex items-center space-x-4 p-2 rounded-md hover:bg-yellow-700 ${activeSection === "spiritualContent" && "bg-yellow-700 text-white"}`}
               >
                 <HiOutlineSun size={24} />
-                <span>Spiritual Content</span>
+                <Link to="/proxy">Numerology</Link>
               </Link>
             </li>
             <li className="hover:text-white">
