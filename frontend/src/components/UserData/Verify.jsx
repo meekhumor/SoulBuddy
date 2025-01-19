@@ -26,13 +26,13 @@ const Verify = () => {
 
   const handleSubmit = () => {
     // Simply navigate to the /birthchart route without alert
-    navigate('/birthchart');
+    navigate('/chart');
   };
 
   return (
     <div className="min-h-screen bg-black text-white flex flex-col justify-center items-center px-6 py-24">
       {/* Heading Section */}
-      <h2 className="text-4xl font-semibold text-yellow-700 mb-8 text-center animate__animated animate__fadeIn">
+      <h2 className="text-4xl font-semibold text-yellow-600 mb-8 text-center animate__animated animate__fadeIn">
         Verify Your Information
       </h2>
 
@@ -42,17 +42,17 @@ const Verify = () => {
 
       {/* Display User Data */}
       <div className="text-xl text-gray-300 mb-8 text-center max-w-xl">
-        <p className="mb-4"><strong className="text-yellow-700">Gender:</strong> {userData.gender}</p>
-        <p className="mb-4"><strong className="text-yellow-700">Date of Birth:</strong> {userData.dateOfBirth}</p>
-        <p className="mb-4"><strong className="text-yellow-700">Time of Birth:</strong> {userData.timeOfBirth}</p>
-        <p className="mb-4"><strong className="text-yellow-700">Location:</strong> {userData.location}</p>
+        <p className="mb-4"><strong className="text-yellow-600">Gender:</strong> {userData.gender}</p>
+        <p className="mb-4"><strong className="text-yellow-600">Date of Birth:</strong> {userData.dateOfBirth}</p>
+        <p className="mb-4"><strong className="text-yellow-600">Time of Birth:</strong> {userData.timeOfBirth}</p>
+        <p className="mb-4"><strong className="text-yellow-600">Location:</strong> {userData.location}</p>
       </div>
 
       {/* Submit Button */}
       <div className="mt-8">
         <button
           onClick={handleSubmit}
-          className="bg-yellow-700 text-black py-3 px-12 rounded-lg text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:bg-yellow-600 animate__animated animate__fadeIn animate__delay-2s"
+          className="bg-yellow-600 text-black py-3 px-12 rounded-lg text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:bg-yellow-600 animate__animated animate__fadeIn animate__delay-2s"
         >
           Submit & Get Your Insights
         </button>

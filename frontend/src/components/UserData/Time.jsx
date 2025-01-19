@@ -21,7 +21,7 @@ const Time = () => {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col justify-center items-center px-6 py-24">
       {/* Heading Section */}
-      <h2 className="text-4xl font-semibold text-yellow-700 mb-8 text-center">
+      <h2 className="text-4xl font-semibold text-yellow-600 mb-8 text-center">
         Select Your Time of Birth
       </h2>
 
@@ -35,7 +35,7 @@ const Time = () => {
           type="time"
           value={time}
           onChange={handleTimeChange}
-          className="text-xl py-3 px-6 rounded-lg bg-gray-900 text-white border-2 border-yellow-700 focus:ring-4 focus:ring-yellow-700 w-72 sm:w-96 transition-all duration-300 transform hover:scale-105"
+          className="text-xl py-3 px-6 rounded-lg bg-gray-900 text-white border-2 border-yellow-600 focus:ring-4 focus:ring-yellow-600 w-72 sm:w-96 transition-all duration-300 transform hover:scale-105"
         />
       </div>
 
@@ -43,7 +43,7 @@ const Time = () => {
       <div className="mt-8">
         <Link
           to="/place" // Navigate to birth location route
-          className="bg-yellow-700 text-black py-3 px-8 rounded-lg text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:bg-yellow-600"
+          className="bg-yellow-600 text-black py-3 px-8 rounded-lg text-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:bg-yellow-600"
         >
           Continue
         </Link>

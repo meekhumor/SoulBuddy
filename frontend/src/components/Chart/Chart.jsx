@@ -67,7 +67,7 @@ const Chart = () => {
       <div className="mt-8 flex justify-center">
         <button
           onClick={handleNavigateToDashboard}
-          className="bg-yellow-700 text-white py-2 px-6 rounded-lg hover:bg-yellow-600 transition duration-300"
+          className="bg-yellow-600 text-white py-2 px-6 rounded-lg hover:bg-yellow-600 transition duration-300"
         >
           Go to Dashboard
         </button>

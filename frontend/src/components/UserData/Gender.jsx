@@ -15,7 +15,7 @@ const Gender = () => {
   return (
     <div className="min-h-screen bg-black text-white flex flex-col justify-center items-center px-6 py-24">
       {/* Heading Section */}
-      <h2 className="text-4xl font-semibold text-yellow-700 mb-6 text-center">
+      <h2 className="text-4xl font-semibold text-yellow-600 mb-6 text-center">
         Select Your Gender
       </h2>
 
@@ -28,7 +28,7 @@ const Gender = () => {
         <button
           onClick={() => handleGenderSelection("Male")}
           className={`bg-gray-900 text-white py-3 px-10 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
-            selectedGender === "Male" ? "bg-yellow-700 scale-105" : "hover:bg-yellow-600"
+            selectedGender === "Male" ? "bg-yellow-600 scale-105" : "hover:bg-yellow-600"
           }`}
         >
           Male
@@ -36,7 +36,7 @@ const Gender = () => {
         <button
           onClick={() => handleGenderSelection("Female")}
           className={`bg-gray-900 text-white py-3 px-10 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
-            selectedGender === "Female" ? "bg-yellow-700 scale-105" : "hover:bg-yellow-600"
+            selectedGender === "Female" ? "bg-yellow-600 scale-105" : "hover:bg-yellow-600"
           }`}
         >
           Female
@@ -44,7 +44,7 @@ const Gender = () => {
         <button
           onClick={() => handleGenderSelection("Other")}
           className={`bg-gray-900 text-white py-3 px-10 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
-            selectedGender === "Other" ? "bg-yellow-700 scale-105" : "hover:bg-yellow-600"
+            selectedGender === "Other" ? "bg-yellow-600 scale-105" : "hover:bg-yellow-600"
           }`}
         >
           Other

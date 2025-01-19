@@ -12,6 +12,7 @@ import Verify from "./components/UserData/Verify";
 import BirthChart from "./components/Birthchart";
 import Chart from "./components/Chart/Chart";
 import Dashboard from "./components/Dashboard/Dashboard";
+import ProxyRequest from "./components/Proxy";
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
             <Route path="/birthchart" element={<BirthChart/>} />
             <Route path="/chart" element={<Chart/>} />
             <Route path="/dashboard" element={<Dashboard/>} />
+            <Route path="/proxy" element={<ProxyRequest/>} />
+
 
 
 
