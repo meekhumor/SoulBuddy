@@ -1,44 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-function convertToJSON(inputText) {
-  const lines = inputText.split("\n").filter(line => line.trim() !== ""); // Split and filter empty lines
-  const result = {};
-  
-  let currentKey = null;
-  let currentDescription = [];
-
-  for (let line of lines) {
-    // Match planet header lines using a regular expression
-    const match = line.match(/^\*\*([A-Za-z]+).*:\*\*/);
-
-    if (match) {
-      if (currentKey) {
-        // Save the previous planet and its description
-        result[currentKey] = currentDescription.join(" ").trim();
-      }
-
-      currentKey = match[1]; // Extract the planet name
-      currentDescription = [line.replace(match[0], "").trim()]; // Start collecting description
-    } else if (currentKey) {
-      // Append additional lines to the current planet description
-      currentDescription.push(line.trim());
-    }
-  }
-
-  // Add the last planet to the result
-  if (currentKey) {
-    result[currentKey] = currentDescription.join(" ").trim();
-  }
-
-  return result;
-}
-
 const LangflowComponent = ({ inputValue }) => {
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [convertedJSON, setConvertedJSON] = useState(null);
 
   const handleSubmit = async () => {
     setError(null); // Reset error state before the new request
@@ -61,11 +27,7 @@ const LangflowComponent = ({ inputValue }) => {
 
       const data = await res.json();
       setResponse(data); // Update response state with API response
-
-      // Convert the response message to JSON
-      const message = data.outputs[0].outputs[0].artifacts.message;
-      const jsonResult = convertToJSON(message);
-      setConvertedJSON(jsonResult); // Store the converted JSON
+      console.log("Langflow Response:", data); // Log response to the console
     } catch (err) {
       setError(err.message); // Set error state if an error occurs
     } finally {
@@ -88,12 +50,6 @@ const LangflowComponent = ({ inputValue }) => {
           <p>{error}</p>
         </div>
       )}
-      {convertedJSON && (
-        <div style={{ marginTop: "20px", color: "white" }}>
-          <h3>Converted JSON:</h3>
-          <pre>{JSON.stringify(convertedJSON, null, 2)}</pre>
-        </div>
-      )}
     </div>
   );
 };
@@ -103,8 +59,8 @@ const BirthChart = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const userId = "636910";
-  const apiKey = "fac1ae6b138f953dd1c29e9b66c67d3996dd53ad";
+  const userId = "636912";
+  const apiKey = "14be15209abb47619164fdd965f48211a9963894";
   const language = "en"; // You can change this to any language code if needed
 
   // Retrieve data from sessionStorage

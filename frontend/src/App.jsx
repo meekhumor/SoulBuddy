@@ -10,6 +10,8 @@ import Time from "./components/UserData/Time";
 import Place from "./components/UserData/Place";
 import Verify from "./components/UserData/Verify";
 import BirthChart from "./components/Birthchart";
+import Chart from "./components/Chart/Chart";
+import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -24,6 +26,10 @@ function App() {
             <Route path="/place" element={<Place/>} />
             <Route path="/verify" element={<Verify/>} />
             <Route path="/birthchart" element={<BirthChart/>} />
+            <Route path="/chart" element={<Chart/>} />
+            <Route path="/dashboard" element={<Dashboard/>} />
+
+
 
 
 
