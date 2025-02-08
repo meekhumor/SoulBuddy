@@ -14,6 +14,7 @@ import Chart from "./components/Chart/Chart";
 import Dashboard from "./components/Dashboard/Dashboard";
 import ProxyRequest from "./components/Proxy";
 import Gems from "./Gems";
+import VideoAnalyzer from "./components/Face";
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
             <Route path="/dashboard" element={<Dashboard/>} />
             <Route path="/proxy" element={<ProxyRequest/>} />
             <Route path="/gems" element={<Gems/>} />
+            <Route path="/video" element={<VideoAnalyzer/>} />
+
 
 
 
