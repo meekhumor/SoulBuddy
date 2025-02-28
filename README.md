@@ -1,11 +1,12 @@
 # 🌟 SoulBuddy - Your AI-Powered Spiritual Guide
 
-![Image](https://github.com/user-attachments/assets/65cfd1db-5884-4a4a-8a40-b07965db6a81)
 
-## ✨ Introduction
 Welcome to **SoulBuddy**, your personal AI-powered spiritual guide! Designed to provide **personalized astrology and numerology insights**, SoulBuddy helps you explore the depths of your spiritual journey through: 
 
-[**Website Link**](https://soulbuddy-frontend.onrender.com/chart)
+**Website Link**: https://soulbuddy-frontend.onrender.com/chart)
+
+![Image](https://github.com/user-attachments/assets/65cfd1db-5884-4a4a-8a40-b07965db6a81)
+
 
 ---
 
